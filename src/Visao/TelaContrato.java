@@ -5,10 +5,13 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 
 public class TelaContrato extends javax.swing.JFrame {
 
+    private final DefaultTableModel modelo; 
     
     public TelaContrato(Object object, boolean b) {
         
@@ -18,7 +21,21 @@ public class TelaContrato extends javax.swing.JFrame {
         
         this.setResizable(false);
         
+         this.modelo = (DefaultTableModel)TabelaContrato.getModel();
+        
     }
+    
+     public void limpaTabela(){
+        int linhas = this.modelo.getRowCount();
+        for(int i=0;i<linhas;i++){
+            this.modelo.removeRow(0);
+        }
+    }
+     
+      public void adicionaItem(Object... objects){
+        this.modelo.addRow(objects);
+    }
+
 
     public JButton getBotaoDetalhes() {
         return BotaoDetalhes;
@@ -51,6 +68,14 @@ public class TelaContrato extends javax.swing.JFrame {
     public JButton getBotonSair() {
         return BotonSair;
     }
+
+    public JTextField getPesquisa() {
+        return pesquisa;
+    }
+
+    public void setPesquisa(JTextField pesquisa) {
+        this.pesquisa = pesquisa;
+    }
     
     
     
@@ -60,68 +85,51 @@ public class TelaContrato extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel4 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         pesquisa = new javax.swing.JTextField();
         Botaopesquisa = new javax.swing.JButton();
+        BotonSair = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         TabelaContrato = new javax.swing.JTable();
-        BotonSair = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        BotaoDetalhes = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         Botaonovocontrato = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
         BotonApagar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        BotaoDetalhes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pesquisa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pesquisaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(pesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, 220, 40));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
-        Botaopesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/iconePesquisar.png"))); // NOI18N
-        Botaopesquisa.setBorderPainted(false);
-        Botaopesquisa.setContentAreaFilled(false);
-        Botaopesquisa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaopesquisaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Botaopesquisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 150, -1, 40));
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nome:");
 
+        pesquisa.setBackground(new java.awt.Color(255, 255, 255));
+        pesquisa.setForeground(new java.awt.Color(0, 0, 0));
+
+        Botaopesquisa.setBackground(new java.awt.Color(255, 255, 255));
+        Botaopesquisa.setForeground(new java.awt.Color(0, 0, 0));
+        Botaopesquisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search15.png"))); // NOI18N
+
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/voltar.png"))); // NOI18N
+        BotonSair.setBorder(null);
+
+        TabelaContrato.setBackground(new java.awt.Color(255, 255, 255));
         TabelaContrato.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TabelaContrato.setForeground(new java.awt.Color(0, 0, 0));
         TabelaContrato.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "Nº de Sequencia", "Cliente", "Contrato"
+                "Nº de Sequencia", "Cliente", "Valor Contrato"
             }
         ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
-            };
             boolean[] canEdit = new boolean [] {
                 false, false, false
             };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
@@ -129,88 +137,81 @@ public class TelaContrato extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(TabelaContrato);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 770, 210));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo-1P.png"))); // NOI18N
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/voltar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setContentAreaFilled(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, -1, 30));
+        Botaonovocontrato.setBackground(new java.awt.Color(255, 255, 255));
+        Botaonovocontrato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addUser30.png"))); // NOI18N
+        Botaonovocontrato.setBorder(null);
 
-        BotaoDetalhes.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotaoDetalhes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/detalhes.png"))); // NOI18N
-        BotaoDetalhes.setBorderPainted(false);
-        BotaoDetalhes.setContentAreaFilled(false);
-        BotaoDetalhes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoDetalhesActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BotaoDetalhes);
+        BotonApagar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonApagar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/removerUser30.png"))); // NOI18N
+        BotonApagar.setBorder(null);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 410, 170, 80));
+        BotaoDetalhes.setBackground(new java.awt.Color(255, 255, 255));
+        BotaoDetalhes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/detalhes30.png"))); // NOI18N
+        BotaoDetalhes.setBorder(null);
 
-        Botaonovocontrato.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        Botaonovocontrato.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/adicionar.png"))); // NOI18N
-        Botaonovocontrato.setBorderPainted(false);
-        Botaonovocontrato.setContentAreaFilled(false);
-        Botaonovocontrato.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaonovocontratoActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Botaonovocontrato);
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BotonSair)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 60, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(pesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Botaopesquisa)
+                            .addGap(511, 511, 511))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2)
+                            .addGap(40, 40, 40)))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(Botaonovocontrato)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(BotonApagar)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(BotaoDetalhes))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(BotonSair)
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pesquisa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Botaopesquisa))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotonApagar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BotaoDetalhes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(Botaonovocontrato, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 420, 130, 70));
-
-        BotonApagar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonApagar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/excluir.png"))); // NOI18N
-        BotonApagar.setBorderPainted(false);
-        BotonApagar.setContentAreaFilled(false);
-        BotonApagar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonApagarActionPerformed(evt);
-            }
-        });
-        jPanel3.add(BotonApagar);
-
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 420, 190, 70));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 4 Contrato.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1, 0, 990, 500));
+        getContentPane().add(jPanel4, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void pesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pesquisaActionPerformed
-
-    private void BotaopesquisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaopesquisaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaopesquisaActionPerformed
-
-    private void BotaoDetalhesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoDetalhesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaoDetalhesActionPerformed
-
-    private void BotonApagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonApagarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonApagarActionPerformed
-
-    private void BotaonovocontratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaonovocontratoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaonovocontratoActionPerformed
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,9 +258,8 @@ public class TelaContrato extends javax.swing.JFrame {
     private javax.swing.JButton BotonSair;
     private javax.swing.JTable TabelaContrato;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField pesquisa;
     // End of variables declaration//GEN-END:variables

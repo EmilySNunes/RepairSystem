@@ -6,9 +6,13 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 public class TelaChamado extends javax.swing.JFrame {
 
+     private final DefaultTableModel modelo; 
+ 
+   
    
     public TelaChamado(java.awt.Frame parent, boolean modal) {
         
@@ -18,6 +22,20 @@ public class TelaChamado extends javax.swing.JFrame {
         
         this.setResizable(false);
         
+         this.modelo = (DefaultTableModel)TabelaChamado.getModel();
+        
+        
+    }
+    
+      public void limpaTabela(){
+        int linhas = this.modelo.getRowCount();
+        for(int i=0;i<linhas;i++){
+            this.modelo.removeRow(0);
+        }
+    }
+     
+      public void adicionaItem(Object... objects){
+        this.modelo.addRow(objects);
     }
 
     public JButton getBotonAbrir() {
@@ -25,7 +43,7 @@ public class TelaChamado extends javax.swing.JFrame {
     }
 
     public JButton getBotonDetalhes() {
-        return BotonDetalhes;
+        return BotaoDetalhes;
     }
 
     public JButton getBotonEditar() {
@@ -48,9 +66,10 @@ public class TelaChamado extends javax.swing.JFrame {
         return jScrollPane1;
     }
 
-    public JTable getjTable1() {
-        return jTable1;
+    public JTable getTabelaChamado() {
+        return TabelaChamado;
     }
+
 
     public JTextField getPesquisar() {
         return pesquisar;
@@ -61,48 +80,43 @@ public class TelaChamado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BotonSair = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         pesquisar = new javax.swing.JTextField();
         BotonPesquisar = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        BotonSair = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TabelaChamado = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
         BotonAbrir = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
         BotonEditar = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        BotonDetalhes = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        BotaoDetalhes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/voltar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setContentAreaFilled(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, -1, 30));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
 
-        jTable1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nome:");
+
+        pesquisar.setBackground(new java.awt.Color(255, 255, 255));
+        pesquisar.setForeground(new java.awt.Color(0, 0, 0));
+
+        BotonPesquisar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonPesquisar.setForeground(new java.awt.Color(0, 0, 0));
+        BotonPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search15.png"))); // NOI18N
+
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/voltar.png"))); // NOI18N
+        BotonSair.setBorder(null);
+
+        TabelaChamado.setBackground(new java.awt.Color(255, 255, 255));
+        TabelaChamado.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TabelaChamado.setForeground(new java.awt.Color(0, 0, 0));
+        TabelaChamado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Nº do Chamado ", "Nome da Empresa"
@@ -116,86 +130,83 @@ public class TelaChamado extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(TabelaChamado);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, 760, 200));
-        getContentPane().add(pesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 150, 220, 40));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo-1P.png"))); // NOI18N
 
-        BotonPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/iconePesquisar.png"))); // NOI18N
-        BotonPesquisar.setBorderPainted(false);
-        BotonPesquisar.setContentAreaFilled(false);
-        BotonPesquisar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonPesquisarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 150, 80, 40));
+        BotonAbrir.setBackground(new java.awt.Color(255, 255, 255));
+        BotonAbrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addUser30.png"))); // NOI18N
+        BotonAbrir.setBorder(null);
 
-        BotonAbrir.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonAbrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/encaminhar.png"))); // NOI18N
-        BotonAbrir.setBorderPainted(false);
-        BotonAbrir.setContentAreaFilled(false);
-        BotonAbrir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonAbrirActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BotonAbrir);
+        BotonEditar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/editUser30.png"))); // NOI18N
+        BotonEditar.setBorder(null);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 410, 140, 70));
+        BotaoDetalhes.setBackground(new java.awt.Color(255, 255, 255));
+        BotaoDetalhes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/detalhes30.png"))); // NOI18N
+        BotaoDetalhes.setBorder(null);
 
-        BotonEditar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/editar.png"))); // NOI18N
-        BotonEditar.setToolTipText("");
-        BotonEditar.setBorderPainted(false);
-        BotonEditar.setContentAreaFilled(false);
-        BotonEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonEditarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(BotonEditar);
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BotonSair)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 65, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(BotonPesquisar)
+                            .addGap(511, 511, 511))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2)
+                            .addGap(40, 40, 40)))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(BotonAbrir)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(BotonEditar)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(BotaoDetalhes))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(BotonSair)
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotonPesquisar))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotonEditar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BotaoDetalhes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BotonAbrir, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 410, 140, 70));
-
-        BotonDetalhes.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonDetalhes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/detalhes.png"))); // NOI18N
-        BotonDetalhes.setBorderPainted(false);
-        BotonDetalhes.setContentAreaFilled(false);
-        BotonDetalhes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonDetalhesActionPerformed(evt);
-            }
-        });
-        jPanel3.add(BotonDetalhes);
-
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 400, 140, 80));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 3 Chamado.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
+        getContentPane().add(jPanel4, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
-
-    private void BotonPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPesquisarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonPesquisarActionPerformed
-
-    private void BotonAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAbrirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonAbrirActionPerformed
-
-    private void BotonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEditarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonEditarActionPerformed
-
-    private void BotonDetalhesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonDetalhesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonDetalhesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,17 +247,16 @@ public class TelaChamado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BotaoDetalhes;
     private javax.swing.JButton BotonAbrir;
-    private javax.swing.JButton BotonDetalhes;
     private javax.swing.JButton BotonEditar;
     private javax.swing.JButton BotonPesquisar;
     private javax.swing.JButton BotonSair;
+    private javax.swing.JTable TabelaChamado;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField pesquisar;
     // End of variables declaration//GEN-END:variables
 }

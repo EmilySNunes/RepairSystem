@@ -13,20 +13,28 @@ import static javax.swing.JOptionPane.ERROR_MESSAGE;
 
 public class ControleLogin implements ActionListener{
     
+    //Cria uma variável Tela Login e uma variável Regra de Login
     private final TelaLogin TL;
     private final RegraLogin RL;
     
    
     
-    public ControleLogin() {
+    public ControleLogin(){
         
+        //Chama a variável Login e seta com true
         this.TL = new TelaLogin(null, true);
+        
+        //Seta a Regra Login com o parâmetro da Rela Login
         this.RL = new RegraLogin(TL);
         
-      
+        //Adicionamento dos componentes da tela
         addListerners();
         
+        //Chamamento da tela Login
         this.TL.setVisible(true);
+        
+        //Limpa a tabela Login
+        this.RL.truncateLogin();
 
         
     }
@@ -34,6 +42,7 @@ public class ControleLogin implements ActionListener{
     public void addListerners(){
     
       
+        //Seta os componentes da tela
         this.TL.getBotonEnviar().addActionListener(this);
         this.TL.getBotonEsqueceuSenha().addActionListener(this);
    
@@ -52,9 +61,12 @@ public class ControleLogin implements ActionListener{
             try {
                
                 
+                //Chama o método acesso da Regra Login
                 this.RL.acesso();
                 
                 this.TL.dispose();
+                
+               
                             
                 
                 

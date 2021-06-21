@@ -18,7 +18,7 @@ public class ControleSupervisor  implements ActionListener{
     public ControleSupervisor() {
         
          this.TS = new TelaSupervisor(null, true);
-         this.RS = new RegraSupervisor(TT);
+         this.RS = new RegraSupervisor(TS);
         
       
         addListerners();
@@ -64,7 +64,7 @@ public class ControleSupervisor  implements ActionListener{
             try {
                 
                 
-                ControleTecnico CT = new ControleTecnico();
+               
                 
                 this.TS.dispose();
                 

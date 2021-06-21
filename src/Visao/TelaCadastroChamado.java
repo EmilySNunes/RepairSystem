@@ -2,6 +2,7 @@
 package Visao;
 
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
@@ -23,73 +24,34 @@ public class TelaCadastroChamado extends javax.swing.JFrame {
         return BotonEncaminhar;
     }
 
-    public void setBotonEncaminhar(JButton BotonEncaminhar) {
-        this.BotonEncaminhar = BotonEncaminhar;
-    }
-
     public JButton getBotonSair() {
         return BotonSair;
-    }
-
-    public void setBotonSair(JButton BotonSair) {
-        this.BotonSair = BotonSair;
     }
 
     public JButton getBotonVerificar() {
         return BotonVerificar;
     }
 
-    public void setBotonVerificar(JButton BotonVerificar) {
-        this.BotonVerificar = BotonVerificar;
-    }
-
     public JTextField getIdDoEquipamento() {
         return IdDoEquipamento;
     }
 
-    public void setIdDoEquipamento(JTextField IdDoEquipamento) {
-        this.IdDoEquipamento = IdDoEquipamento;
-    }
-
-    public JTextField getDataDoAtendimento() {
+    public JFormattedTextField getDataDoAtendimento() {
         return dataDoAtendimento;
-    }
-
-    public void setDataDoAtendimento(JTextField dataDoAtendimento) {
-        this.dataDoAtendimento = dataDoAtendimento;
-    }
-
-    public JLabel getjLabel1() {
-        return jLabel1;
-    }
-
-    public void setjLabel1(JLabel jLabel1) {
-        this.jLabel1 = jLabel1;
     }
 
     public JTextField getMotivoDaChamada() {
         return motivoDaChamada;
     }
 
-    public void setMotivoDaChamada(JTextField motivoDaChamada) {
-        this.motivoDaChamada = motivoDaChamada;
-    }
-
     public JTextField getnDoChamado1() {
         return nDoChamado1;
-    }
-
-    public void setnDoChamado1(JTextField nDoChamado1) {
-        this.nDoChamado1 = nDoChamado1;
     }
 
     public JTextField getNomeDaEmpresa() {
         return nomeDaEmpresa;
     }
 
-    public void setNomeDaEmpresa(JTextField nomeDaEmpresa) {
-        this.nomeDaEmpresa = nomeDaEmpresa;
-    }
     
     
 
@@ -102,64 +64,147 @@ public class TelaCadastroChamado extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
         BotonSair = new javax.swing.JButton();
-        nomeDaEmpresa = new javax.swing.JTextField();
-        nDoChamado1 = new javax.swing.JTextField();
-        IdDoEquipamento = new javax.swing.JTextField();
-        dataDoAtendimento = new javax.swing.JTextField();
-        motivoDaChamada = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
-        BotonVerificar = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        BotonEncaminhar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        nDoChamado1 = new javax.swing.JTextField();
+        nomeDaEmpresa = new javax.swing.JTextField();
+        motivoDaChamada = new javax.swing.JTextField();
+        IdDoEquipamento = new javax.swing.JTextField();
+        dataDoAtendimento = new javax.swing.JFormattedTextField();
+        BotonVerificar = new javax.swing.JButton();
+        BotonEncaminhar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/voltar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setContentAreaFilled(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 450, 70, 30));
-        getContentPane().add(nomeDaEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 190, 230, 30));
-        getContentPane().add(nDoChamado1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, 230, 30));
-        getContentPane().add(IdDoEquipamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 230, 30));
-        getContentPane().add(dataDoAtendimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 160, 30));
-        getContentPane().add(motivoDaChamada, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 270, 230, 70));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        BotonVerificar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        BotonVerificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/visualizar.png"))); // NOI18N
-        BotonVerificar.setBorderPainted(false);
-        BotonVerificar.setContentAreaFilled(false);
-        jPanel1.add(BotonVerificar);
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/voltar.png"))); // NOI18N
+        BotonSair.setBorder(null);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 410, 150, 60));
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nº do Chamado:");
 
-        BotonEncaminhar.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        BotonEncaminhar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/encaminhar.png"))); // NOI18N
-        BotonEncaminhar.setToolTipText("");
-        BotonEncaminhar.setBorderPainted(false);
-        BotonEncaminhar.setContentAreaFilled(false);
-        jPanel2.add(BotonEncaminhar);
+        jLabel2.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Nome da empresa:");
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 410, 150, 70));
+        jLabel3.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Id do Equipamento:");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 3.1 Novo chamado.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
+        jLabel4.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Motivo da Chamada:");
+
+        jLabel5.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Data do atendimento técnico:");
+
+        nDoChamado1.setBackground(new java.awt.Color(255, 255, 255));
+        nDoChamado1.setForeground(new java.awt.Color(0, 0, 0));
+
+        nomeDaEmpresa.setBackground(new java.awt.Color(255, 255, 255));
+        nomeDaEmpresa.setForeground(new java.awt.Color(0, 0, 0));
+
+        motivoDaChamada.setBackground(new java.awt.Color(255, 255, 255));
+        motivoDaChamada.setForeground(new java.awt.Color(0, 0, 0));
+
+        IdDoEquipamento.setBackground(new java.awt.Color(255, 255, 255));
+        IdDoEquipamento.setForeground(new java.awt.Color(0, 0, 0));
+
+        dataDoAtendimento.setBackground(new java.awt.Color(255, 255, 255));
+        dataDoAtendimento.setForeground(new java.awt.Color(0, 0, 0));
+        try {
+            dataDoAtendimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        BotonVerificar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonVerificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/verificar30.png"))); // NOI18N
+        BotonVerificar.setBorder(null);
+
+        BotonEncaminhar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonEncaminhar.setForeground(new java.awt.Color(0, 0, 0));
+        BotonEncaminhar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/enviar30.png"))); // NOI18N
+        BotonEncaminhar.setBorder(null);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(62, 62, 62)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(nomeDaEmpresa, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
+                                .addComponent(jLabel1)
+                                .addComponent(jLabel4)
+                                .addComponent(nDoChamado1, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE))
+                            .addComponent(motivoDaChamada, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(67, 67, 67)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(IdDoEquipamento, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5)
+                            .addComponent(dataDoAtendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BotonSair)))
+                .addContainerGap(75, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(BotonEncaminhar)
+                .addGap(18, 18, 18)
+                .addComponent(BotonVerificar)
+                .addGap(31, 31, 31))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BotonSair)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nDoChamado1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(IdDoEquipamento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(nomeDaEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dataDoAtendimento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel4)
+                .addGap(6, 6, 6)
+                .addComponent(motivoDaChamada, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 66, Short.MAX_VALUE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotonVerificar)
+                    .addComponent(BotonEncaminhar))
+                .addGap(13, 13, 13))
+        );
+
+        getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -204,10 +249,13 @@ public class TelaCadastroChamado extends javax.swing.JFrame {
     private javax.swing.JButton BotonSair;
     private javax.swing.JButton BotonVerificar;
     private javax.swing.JTextField IdDoEquipamento;
-    private javax.swing.JTextField dataDoAtendimento;
+    private javax.swing.JFormattedTextField dataDoAtendimento;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField motivoDaChamada;
     private javax.swing.JTextField nDoChamado1;
     private javax.swing.JTextField nomeDaEmpresa;

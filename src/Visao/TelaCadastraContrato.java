@@ -1,33 +1,25 @@
-
 package Visao;
 
 import javax.swing.JButton;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-
 public class TelaCadastraContrato extends javax.swing.JFrame {
 
-   
-    public TelaCadastraContrato(  java.awt.Frame parent, boolean modal) {
-        
-        initComponents();    
-        
-        
-         this.setLocationRelativeTo(null);
-         
-         this.setResizable(false);
-                 
+    public TelaCadastraContrato(java.awt.Frame parent, boolean modal) {
 
-        
+        initComponents();
+
+        this.setLocationRelativeTo(null);
+
+        this.setResizable(false);
+
     }
 
     public TelaCadastraContrato(Object object, boolean b) {
-     
-        
-    }
 
-   
+    }
 
     public JButton getExcluir() {
         return Excluir;
@@ -45,29 +37,35 @@ public class TelaCadastraContrato extends javax.swing.JFrame {
         this.Salvar = Salvar;
     }
 
-    public JTextField getCnpj() {
+    public JFormattedTextField getCnpj() {
         return cnpj;
     }
 
-    public void setCnpj(JTextField cnpj) {
+    public void setCnpj(JFormattedTextField cnpj) {
         this.cnpj = cnpj;
     }
 
+
     public JTextField getEndereco() {
-        return endereco;
+        return tiposequipa;
     }
 
     public void setEndereco(JTextField endereco) {
-        this.endereco = endereco;
+        this.tiposequipa = endereco;
     }
 
-    public JLabel getjLabel1() {
-        return jLabel1;
+    public JTextField getnSequencial() {
+        return nSequencial;
     }
 
-    public void setjLabel1(JLabel jLabel1) {
-        this.jLabel1 = jLabel1;
+    public void setnSequencial(JTextField nSequencial) {
+        this.nSequencial = nSequencial;
     }
+
+    public void setValorassociado(JTextField valorassociado) {
+        this.valorassociado = valorassociado;
+    }
+    
 
     public JTextField getNequipa() {
         return nequipa;
@@ -102,19 +100,17 @@ public class TelaCadastraContrato extends javax.swing.JFrame {
     }
 
     public JTextField getValorassocia() {
-        return valorassocia;
+        return valorassociado;
     }
 
     public void setValorassocia(JTextField valorassocia) {
-        this.valorassocia = valorassocia;
+        this.valorassociado = valorassocia;
     }
 
     public JButton getBotonSair() {
         return BotonSair;
     }
 
-    
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -124,107 +120,205 @@ public class TelaCadastraContrato extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        tiposequipa = new javax.swing.JTextField();
-        valorassocia = new javax.swing.JTextField();
-        nomeem = new javax.swing.JTextField();
-        endereco = new javax.swing.JTextField();
-        nequipa = new javax.swing.JTextField();
-        parcelapaga = new javax.swing.JTextField();
-        cnpj = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
         BotonSair = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        lblcpf = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        tiposequipa = new javax.swing.JTextField();
+        valorassociado = new javax.swing.JTextField();
+        endereco = new javax.swing.JTextField();
         Excluir = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
         Salvar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        nomeem = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        nequipa = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        parcelapaga = new javax.swing.JTextField();
+        nSequencial = new javax.swing.JTextField();
+        cnpj = new javax.swing.JFormattedTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        tiposequipa.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        tiposequipa.setText("Cirúrgicos");
-        getContentPane().add(tiposequipa, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 245, 200, 30));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        valorassocia.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        valorassocia.setText("1000");
-        getContentPane().add(valorassocia, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 240, 30));
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/voltar.png"))); // NOI18N
+        BotonSair.setBorder(null);
 
-        nomeem.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        nomeem.setText("Laclin");
-        getContentPane().add(nomeem, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 145, 250, 30));
+        lblcpf.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        lblcpf.setForeground(new java.awt.Color(0, 0, 0));
+        lblcpf.setText("CNPJ:");
 
-        endereco.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        endereco.setText("Rua Joviniano Dourado");
-        getContentPane().add(endereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 195, 330, 30));
+        jLabel2.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Nº Sequencial:");
 
-        nequipa.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        nequipa.setText("34");
-        getContentPane().add(nequipa, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 245, 240, 30));
+        jLabel3.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Tipos de equipamentos:");
 
-        parcelapaga.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        parcelapaga.setText("3");
-        getContentPane().add(parcelapaga, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 290, 240, 30));
+        jLabel4.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Nome da empresa:");
 
-        cnpj.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        cnpj.setText("12345678910112");
-        getContentPane().add(cnpj, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 195, 240, 30));
+        jLabel5.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Endereco");
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/voltar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setContentAreaFilled(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
+        jLabel6.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Valor associado:");
+
+        tiposequipa.setBackground(new java.awt.Color(255, 255, 255));
+        tiposequipa.setForeground(new java.awt.Color(0, 0, 0));
+
+        valorassociado.setBackground(new java.awt.Color(255, 255, 255));
+        valorassociado.setForeground(new java.awt.Color(0, 0, 0));
+
+        endereco.setBackground(new java.awt.Color(255, 255, 255));
+        endereco.setForeground(new java.awt.Color(0, 0, 0));
+
+        Excluir.setBackground(new java.awt.Color(255, 255, 255));
+        Excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/removerUser30.png"))); // NOI18N
+        Excluir.setBorder(null);
+
+        Salvar.setBackground(new java.awt.Color(255, 255, 255));
+        Salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save--v2.png"))); // NOI18N
+        Salvar.setBorder(null);
+
+        nomeem.setBackground(new java.awt.Color(255, 255, 255));
+        nomeem.setForeground(new java.awt.Color(0, 0, 0));
+
+        jLabel8.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Nº de equipamentos:");
+
+        nequipa.setBackground(new java.awt.Color(255, 255, 255));
+        nequipa.setForeground(new java.awt.Color(0, 0, 0));
+
+        jLabel9.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Parcelas de pagamentos:");
+
+        parcelapaga.setBackground(new java.awt.Color(255, 255, 255));
+        parcelapaga.setForeground(new java.awt.Color(0, 0, 0));
+
+        nSequencial.setBackground(new java.awt.Color(255, 255, 255));
+        nSequencial.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
+        nSequencial.setForeground(new java.awt.Color(0, 0, 0));
+        nSequencial.setText("00000000000");
+        nSequencial.setBorder(null);
+        nSequencial.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                nSequencialMouseClicked(evt);
             }
         });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 50, 30));
 
-        Excluir.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        Excluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/excluir.png"))); // NOI18N
-        Excluir.setToolTipText("");
-        Excluir.setBorderPainted(false);
-        Excluir.setContentAreaFilled(false);
-        Excluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ExcluirActionPerformed(evt);
-            }
-        });
-        jPanel1.add(Excluir);
+        try {
+            cnpj.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, 110, 80));
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BotonSair)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Salvar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(Excluir))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2)
+                            .addComponent(lblcpf)
+                            .addComponent(jLabel3)
+                            .addComponent(tiposequipa, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                            .addComponent(valorassociado, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                            .addComponent(jLabel6)
+                            .addComponent(nSequencial)
+                            .addComponent(cnpj))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(endereco, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(nomeem, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nequipa, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)
+                            .addComponent(parcelapaga, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9))))
+                .addGap(50, 50, 50))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BotonSair)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeem, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nSequencial, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblcpf)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(endereco, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tiposequipa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nequipa, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(valorassociado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(parcelapaga, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Salvar)
+                    .addComponent(Excluir))
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
 
-        Salvar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        Salvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/salvar.png"))); // NOI18N
-        Salvar.setBorderPainted(false);
-        Salvar.setContentAreaFilled(false);
-        Salvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalvarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(Salvar);
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 410, 110, 70));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 4.1 Novo Contrato.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 500));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void ExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExcluirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ExcluirActionPerformed
-
-    private void SalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalvarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SalvarActionPerformed
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
+    private void nSequencialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nSequencialMouseClicked
+        nSequencial.setText("");
+    }//GEN-LAST:event_nSequencialMouseClicked
 
     /**
      * @param args the command line arguments
@@ -256,9 +350,9 @@ public class TelaCadastraContrato extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               
+
                 System.exit(0);
-                
+
             }
         });
     }
@@ -267,15 +361,22 @@ public class TelaCadastraContrato extends javax.swing.JFrame {
     private javax.swing.JButton BotonSair;
     private javax.swing.JButton Excluir;
     private javax.swing.JButton Salvar;
-    private javax.swing.JTextField cnpj;
+    private javax.swing.JFormattedTextField cnpj;
     private javax.swing.JTextField endereco;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lblcpf;
+    private javax.swing.JTextField nSequencial;
     private javax.swing.JTextField nequipa;
     private javax.swing.JTextField nomeem;
     private javax.swing.JTextField parcelapaga;
     private javax.swing.JTextField tiposequipa;
-    private javax.swing.JTextField valorassocia;
+    private javax.swing.JTextField valorassociado;
     // End of variables declaration//GEN-END:variables
 }

@@ -7,6 +7,7 @@ import Visao.TelaEquipamento;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 
 
@@ -25,12 +26,14 @@ public class ControleMostraEquipamento  implements ActionListener{
         addListerners();
         
         this.TE.setVisible(true);
+        
+        this.RME.listar();
 
     }
     
     public void addListerners(){
     
-        this.TE.getBotonAbrir().addActionListener(this);
+        this.TE.getBotaonovoequipamento().addActionListener(this);
         this.TE.getBotonDetalhes().addActionListener(this);
         this.TE.getBotonEditar().addActionListener(this);
         this.TE.getBotonPesquisar().addActionListener(this);
@@ -42,14 +45,16 @@ public class ControleMostraEquipamento  implements ActionListener{
     public void actionPerformed(ActionEvent var) {
         
         
-        if(var.getSource().equals(this.TE.getBotonAbrir())){
+        if(var.getSource().equals(this.TE.getBotaonovoequipamento())){
         
-        JOptionPane.showMessageDialog(null,"AINDA NÃO HÁ AÇÕES AQUI","INFORMAÇÃO:",INFORMATION_MESSAGE);
+         ControleEquipamento CE = new ControleEquipamento();
+         
+         this.TE.dispose();
         
-        } else if(var.getSource().equals(this.TE.getBotonPesquisar())){
+        } else if(var.getSource().equals(this.TE.getBotonDetalhes())){
         
-        JOptionPane.showMessageDialog(null,"AINDA NÃO HÁ AÇÕES AQUI","INFORMAÇÃO:",INFORMATION_MESSAGE);
-            
+        
+             JOptionPane.showMessageDialog(null,"AINDA NÃO HÁ AÇÕES AQUI","INFORMAÇÃO:",INFORMATION_MESSAGE);
         
         } else if(var.getSource().equals(this.TE.getBotonEditar())){
         
@@ -63,7 +68,51 @@ public class ControleMostraEquipamento  implements ActionListener{
         }
          else if(var.getSource().equals(this.TE.getBotonSair())){
         
-              ControleLogin CL = new ControleLogin();
+               String rece = null;
+          
+             try {
+                 
+                 rece = this.RME.procuraLogin();
+                 
+                 if(rece.equals("Admnistrador")){
+       
+          ControlePrincipal CP = new ControlePrincipal();
+          
+          this.TE.dispose();
+       
+       }else if(rece.equals("Atendente")){
+       
+          ControleAtendente CA = new ControleAtendente();
+          
+              this.TE.dispose();
+       
+       }else if(rece.equals("Supervisor")){
+       
+          ControleSupervisor CS = new ControleSupervisor();
+          
+              this.TE.dispose();
+       
+       }else if(rece.equals("Tecnico")){
+       
+           ControleTecnico CT = new ControleTecnico();
+           
+               this.TE.dispose();
+       
+       }else if(rece.equals("Vendedor")){
+       
+          ControleVendedor CV = new ControleVendedor();
+          
+              this.TE.dispose();
+       
+       }
+                 
+             } catch (Exception ex) {
+                 
+               
+                   JOptionPane.showMessageDialog(null,"ERRO","XXXX",ERROR_MESSAGE);
+             }
+            
+            
                
                TE.dispose();
             
@@ -76,3 +125,4 @@ public class ControleMostraEquipamento  implements ActionListener{
     
     
 }
+ 

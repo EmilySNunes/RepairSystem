@@ -1,7 +1,9 @@
 
 package Controle;
 
+import Modelo.LoginDao;
 import Visao.TelaAddRelatorio;
+import java.sql.SQLException;
 
 
 public class RegraRelatorio {
@@ -11,6 +13,17 @@ public class RegraRelatorio {
         
     }
     
-    
+      public String procuraLogin() throws SQLException{
+         
+         String passa = null;
+         
+           LoginDao LD = new LoginDao();
+         
+          passa = LD.procuraLogin();
+           
+           
+           return passa;
+         
+     }
     
 }

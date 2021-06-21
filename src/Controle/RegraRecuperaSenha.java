@@ -57,6 +57,8 @@ import javax.swing.JPasswordField;
                  
                  
               UD.RecuperaSenha(U);
+              
+              ControleLogin CL = new ControleLogin();
              
              }else{
                  

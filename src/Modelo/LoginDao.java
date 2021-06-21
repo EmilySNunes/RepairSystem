@@ -2,8 +2,11 @@
 package Modelo;
 
 import Visao.TelaLogin;
+ import java.sql.Connection;
+import java.sql.PreparedStatement; /* 
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.PreparedStatement;
+import com.mysql.jdbc.PreparedStatement; */
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -15,6 +18,7 @@ import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 
 
 public class LoginDao {
+    
     
     public ArrayList<Usuario> LeituradoLogin(Login LC) throws SQLException {
 
@@ -61,8 +65,9 @@ public class LoginDao {
         
     }
     
-    public void CriaLogin(Login L){
-    
+    public void CriaLogin(Login L) throws SQLException{
+        
+      
         Connection conecta = Conexao.getConexao();
         PreparedStatement pst = null;
        
@@ -71,14 +76,17 @@ public class LoginDao {
       
         try {
             
-            pst = (PreparedStatement) conecta.prepareStatement("INSERT INTO Login(usuario, senha) VALUES (?,?)");
+            pst = (PreparedStatement) conecta.prepareStatement("INSERT INTO Login(usuario, senha, classficacao ) VALUES (?,?,?)");
             
             pst.setString(1, L.getUsuario());
             pst.setString(2, L.getSenha());
+            pst.setString(3, L.getClassificacao());
+            
+           
             
              pst.executeUpdate();
             
-            JOptionPane.showMessageDialog(null,"SEJA BEM VINDO","ALERTA LOGIN",INFORMATION_MESSAGE);
+           
             
             
             
@@ -96,6 +104,85 @@ public class LoginDao {
         }
     
     } 
+    
+    public void truncaLogin(){
+    
+        Connection conecta = Conexao.getConexao();
+        PreparedStatement pst = null;
+       
+        
+        
+      
+        try {
+            
+            pst = (PreparedStatement) conecta.prepareStatement(" TRUNCATE Login");
+            
+             pst.executeUpdate();
+            
+            
+            
+            
+        } catch (SQLException var) {
+           
+            
+             JOptionPane.showMessageDialog(null,"ERRO \n","ALERTA TRUNCATE",ERROR_MESSAGE);
+           
+            
+        } finally {
+
+            Conexao.closerConnection(conecta, pst);
+
+        }
+    
+    } 
+    
+    public String procuraLogin() throws SQLException {
+
+              
+        Connection Conecta = Conexao.getConexao();
+        PreparedStatement pst = null;
+        ResultSet rs = null;
+
+        String retornaLogin = null;
+
+        try {
+           
+
+            pst = (PreparedStatement) Conecta.prepareStatement(" SELECT classficacao  FROM Login WHERE id = 1 ");
+            
+            
+            
+            rs = pst.executeQuery();
+            
+            
+
+            while (rs.next()) {
+
+               
+                retornaLogin = rs.getString("classficacao"); 
+                
+                
+
+                
+
+            }
+            
+             rs.close();
+            pst.close();
+            
+
+        } catch (SQLException ex) {
+            
+           throw new RuntimeException(ex);
+            
+        }
+        
+        return retornaLogin;
+        
+    }
+         
+    
+    
 
 
 }

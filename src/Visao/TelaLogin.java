@@ -1,4 +1,3 @@
-
 package Visao;
 
 import javax.swing.JButton;
@@ -6,24 +5,19 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-
 public class TelaLogin extends javax.swing.JFrame {
 
-   
     public TelaLogin(Object object, boolean b) {
         
+        //Seta componentes da tela
         initComponents();
         
-         this.setLocationRelativeTo(null);
-         
-         this.setResizable(false);
-         
-         
+        //Posiciona a tela no centro
+        this.setLocationRelativeTo(null);
         
+        //Bloqueia redimensionamento da tela 
+        this.setResizable(false);
     }
-
-
-    
 
     public JButton getBotonEnviar() {
         return BotonEnviar;
@@ -37,91 +31,118 @@ public class TelaLogin extends javax.swing.JFrame {
         return cnpj;
     }
 
-    
     public JPasswordField getCamposenha() {
         return camposenha;
     }
 
-    
-     
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BotonEsqueceuSenha = new javax.swing.JButton();
-        BotonEnviar = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         cnpj = new javax.swing.JTextField();
         camposenha = new javax.swing.JPasswordField();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        BotonEnviar = new javax.swing.JButton();
+        BotonEsqueceuSenha = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotonEsqueceuSenha.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonEsqueceuSenha.setText("<html>     <p> <u> Esqueceu a senha? </u> </p>       </html>");
-        BotonEsqueceuSenha.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonEsqueceuSenhaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonEsqueceuSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 160, 30));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        BotonEnviar.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonEnviar.setText("Entrar");
-        BotonEnviar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonEnviarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonEnviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 390, 110, 40));
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Usuário:");
 
-        cnpj.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Senha:");
+
+        cnpj.setBackground(new java.awt.Color(255, 255, 255));
+        cnpj.setForeground(new java.awt.Color(0, 0, 0));
         cnpj.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cnpjActionPerformed(evt);
             }
         });
-        getContentPane().add(cnpj, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, 310, 40));
 
+        camposenha.setBackground(new java.awt.Color(255, 255, 255));
+        camposenha.setForeground(new java.awt.Color(0, 0, 0));
         camposenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 camposenhaActionPerformed(evt);
             }
         });
-        getContentPane().add(camposenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 320, 40));
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 450, 140, 40));
 
-        jPanel2.setBackground(java.awt.Color.white);
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, 40, 40));
+        BotonEnviar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonEnviar.setForeground(new java.awt.Color(0, 0, 0));
+        BotonEnviar.setText("Entrar");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 1.png"))); // NOI18N
-        jLabel1.setFocusable(false);
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, 550));
+        BotonEsqueceuSenha.setBackground(new java.awt.Color(255, 255, 255));
+        BotonEsqueceuSenha.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
+        BotonEsqueceuSenha.setForeground(new java.awt.Color(0, 0, 0));
+        BotonEsqueceuSenha.setText("Recuperar senha");
+        BotonEsqueceuSenha.setBorder(null);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo-1200.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BotonEnviar)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(cnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel1)
+                        .addComponent(jLabel2)
+                        .addComponent(camposenha, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(BotonEsqueceuSenha)))
+                .addContainerGap(36, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(80, 80, 80))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cnpj, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(camposenha, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(BotonEnviar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(BotonEsqueceuSenha)
+                .addContainerGap(61, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void cnpjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnpjActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cnpjActionPerformed
-
-    private void BotonEnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEnviarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonEnviarActionPerformed
-
-    private void BotonEsqueceuSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEsqueceuSenhaActionPerformed
-       
-        
-    }//GEN-LAST:event_BotonEsqueceuSenhaActionPerformed
 
     private void camposenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_camposenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_camposenhaActionPerformed
 
-   
+    private void cnpjActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cnpjActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cnpjActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -149,8 +170,9 @@ public class TelaLogin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                
-               System.exit(0);
+
+                //Fecha o sistema
+                System.exit(0);
             }
         });
     }
@@ -161,10 +183,9 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JPasswordField camposenha;
     private javax.swing.JTextField cnpj;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 
-    
-    
 }

@@ -5,6 +5,9 @@ package Controle;
 import Visao.TelaNovoEquipamento;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.WARNING_MESSAGE;
@@ -33,8 +36,9 @@ public class ControleEquipamento implements ActionListener{
     public void addListerners(){
     
         this.TNE.getBotaoExcluir().addActionListener(this);
-        this.TNE.getBotaoVoltar().addActionListener(this);
+        this.TNE.getBotaoSalvar().addActionListener(this);
         this.TNE.getBotonSair().addActionListener(this);
+      
        
        
        
@@ -51,30 +55,19 @@ public class ControleEquipamento implements ActionListener{
          
         }
          
-         else if(var.getSource().equals(this.TNE.getBotaoVoltar())){
-        
-             try {
-                 
-                 JOptionPane.showMessageDialog(null,"AINDA NÃO HÁ AÇÕES AQUI!", "INFORMAÇÃO: ",WARNING_MESSAGE);
-                 
-             } catch (Exception ex) {
-                 
-                 JOptionPane.showMessageDialog(null,"ERRO","XXXX",ERROR_MESSAGE);
-             }
+         else if(var.getSource().equals(this.TNE.getBotaoSalvar())){  
+          
+                this.RE.AdicionaEquipamento();
+          
         
         }
          else if(var.getSource().equals(this.TNE.getBotonSair())){
         
-             try {
-                 
-                      ControleLogin CL = new ControleLogin();
-                      
-                      TNE.dispose();
-                 
-             } catch (Exception ex) {
-                 
-                 JOptionPane.showMessageDialog(null,"ERRO","XXXX",ERROR_MESSAGE);
-             }
+                    ControleMostraEquipamento CME = new ControleMostraEquipamento();
+                    
+                    this.TNE.dispose();
+          
+            
         
         }
         

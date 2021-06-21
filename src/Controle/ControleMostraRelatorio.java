@@ -7,6 +7,7 @@ import Visao.TelaRelatorio;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.INFORMATION_MESSAGE;
 
 
@@ -64,8 +65,41 @@ public class ControleMostraRelatorio  implements ActionListener{
         }
          else if(var.getSource().equals(this.TR.getBotonSair())){
         
-             ControleLogin CL = new ControleLogin();
-             
+              String rece = null;
+          
+             try {
+                 
+                 rece = this.RR.procuraLogin();
+                 
+                 if(rece.equals("Admnistrador")){
+       
+          ControlePrincipal CP = new ControlePrincipal();
+       
+       }else if(rece.equals("Atendente")){
+       
+          ControleAtendente CA = new ControleAtendente();
+       
+       }else if(rece.equals("Supervisor")){
+       
+          ControleSupervisor CS = new ControleSupervisor();
+       
+       }else if(rece.equals("Tecnico")){
+       
+           ControleTecnico CT = new ControleTecnico();
+       
+       }else if(rece.equals("Vendedor")){
+       
+          ControleVendedor CV = new ControleVendedor();
+       
+       }
+                 
+             } catch (Exception ex) {
+                 
+               
+                   JOptionPane.showMessageDialog(null,"ERRO","XXXX",ERROR_MESSAGE);
+             }
+            
+
              TR.dispose();
         
         }

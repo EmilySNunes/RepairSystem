@@ -1,12 +1,13 @@
 
 package Controle;
 
-import javax.swing.text.html.HTML;
+import Visao.TelaSupervisor;
+
 
 
 public class RegraSupervisor {
 
-    RegraSupervisor(HTML.Tag TT) {
+    RegraSupervisor(TelaSupervisor TS) {
        
         
     }

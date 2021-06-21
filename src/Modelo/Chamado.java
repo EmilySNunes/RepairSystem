@@ -8,7 +8,7 @@ public class Chamado {
      String nomeEmpresa;
      int idEquipamento;
      String motivoChamada;
-     int dataentendimento;
+     String dataentendimento;
 
     public int getnChamado() {
         return nChamado;
@@ -44,13 +44,15 @@ public class Chamado {
         this.motivoChamada = motivoChamada;
     }
 
-    public int getDataentendimento() {
+    public String getDataentendimento() {
         return dataentendimento;
     }
 
-    public void setDataentendimento(int dataentendimento) {
+    public void setDataentendimento(String dataentendimento) {
         this.dataentendimento = dataentendimento;
     }
+
+    
     
     
     

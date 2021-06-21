@@ -7,8 +7,9 @@ use RepairSystem;
 create table if not exists Login(
 
    id int not null primary key auto_increment,
-   usuario varchar(13) not null,
-   senha varchar(18) not null
+   usuario varchar(15) not null,
+   senha varchar(20) not null,
+   classficacao varchar(15)
 
 )engine = innodb, auto_increment = 1;
 
@@ -16,9 +17,10 @@ create table if not exists Login(
 select * from Login;
 -- truncate Login
 
+
 create table if not exists Funcionario(
 
-	cpf varchar(13) primary key not null ,
+	cpf varchar(14) primary key not null ,
 	nome varchar(45) not null,
     email varchar(45) not null,
 	endereco varchar(40) not null,
@@ -34,7 +36,7 @@ create table if not exists Funcionario(
 create table if not exists Usuario(
 
   codigo_de_usuario int not null primary key auto_increment,
-  usuario varchar(13) not null,
+  usuario varchar(14) not null,
   senha varchar(20) not null,
   email varchar(40)not null,
   classficacao varchar(15)
@@ -42,7 +44,7 @@ create table if not exists Usuario(
 
 )engine = innodb, auto_increment = 6000;
 
- insert into Usuario(codigo_de_usuario, usuario, senha, email, classficacao) values (9, "123456789", "sabrina", "sabrina@gmail", "Adm");
+ insert into Usuario(usuario, senha, email, classficacao) values ("123456789", "pedro", "sabrina@gmail", "Adm");
 
 select * from Usuario;
 -- truncate Usuario;
@@ -57,7 +59,7 @@ nomeempresa varchar (30) not null,
 endereco varchar (30) not null,
 ndequipamento int not null,
 parcelaspagamento int not null
-)engine = innodb, auto_increment = 00000007560;
+)engine = innodb, auto_increment = 7560;
 
 select * from Contrato;
 -- truncate Contrato;
@@ -74,3 +76,18 @@ dataAtendimento int not null
 
 select * from Chamado;
 -- truncate Chamado;
+
+create table if not exists Equipamento(
+
+	nManutencao int not null primary key,  
+	nSerie varchar(10) not null, 
+	tipoEquipamento varchar(20) not null,
+	valorAssociado int not null,
+    nomeEquipamento varchar(20) not null,
+	nContrato int not null,
+    DataFabrica varchar(10) not null,
+    parcelaPagamento int not null
+
+);
+
+select * from Equipamento;

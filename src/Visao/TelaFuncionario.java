@@ -6,10 +6,12 @@ import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
 
 
 public class TelaFuncionario extends javax.swing.JFrame {
 
+     private final DefaultTableModel modelo; 
     
     public TelaFuncionario(Object object, boolean b) {
         
@@ -19,9 +21,25 @@ public class TelaFuncionario extends javax.swing.JFrame {
         
         this.setResizable(false);
         
+          this.modelo = (DefaultTableModel)TabelaFuncionario.getModel();
+        
     }
 
  
+     public void limpaTabela(){
+        int linhas = this.modelo.getRowCount();
+        for(int i=0;i<linhas;i++){
+            this.modelo.removeRow(0);
+        }
+    }
+     
+      public void adicionaItem(Object... objects){
+        this.modelo.addRow(objects);
+    }
+
+    public DefaultTableModel getModelo() {
+        return modelo;
+    }
 
   
 
@@ -60,42 +78,36 @@ public class TelaFuncionario extends javax.swing.JFrame {
     public JButton getBotonSair() {
         return BotonSair;
     }
-
+    
  
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         TabelaFuncionario = new javax.swing.JTable();
+        BotonSair = new javax.swing.JButton();
         pesquisar = new javax.swing.JTextField();
         BotonPesquisar = new javax.swing.JButton();
-        BotonDetalhes = new javax.swing.JButton();
-        BotonSair = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
-        BotonAdicionaFuncionario = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        BotonEditar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        BotonAdicionaFuncionario = new javax.swing.JButton();
+        BotonEditar = new javax.swing.JButton();
+        BotonDetalhes = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setForeground(new java.awt.Color(0, 0, 0));
+
+        TabelaFuncionario.setBackground(new java.awt.Color(255, 255, 255));
         TabelaFuncionario.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        TabelaFuncionario.setForeground(new java.awt.Color(0, 0, 0));
         TabelaFuncionario.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
                 "CPF", "Função", "Nome"
@@ -118,91 +130,97 @@ public class TelaFuncionario extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(TabelaFuncionario);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 760, 200));
-        getContentPane().add(pesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 140, 230, 30));
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/voltar.png"))); // NOI18N
+        BotonSair.setBorder(null);
 
-        BotonPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/iconePesquisar.png"))); // NOI18N
-        BotonPesquisar.setBorderPainted(false);
-        BotonPesquisar.setContentAreaFilled(false);
-        BotonPesquisar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonPesquisarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 134, 80, -1));
+        pesquisar.setBackground(new java.awt.Color(255, 255, 255));
+        pesquisar.setForeground(new java.awt.Color(0, 0, 0));
 
-        BotonDetalhes.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonDetalhes.setText("Detalhes");
-        BotonDetalhes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonDetalhesActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonDetalhes, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 410, 100, 50));
+        BotonPesquisar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonPesquisar.setForeground(new java.awt.Color(0, 0, 0));
+        BotonPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search15.png"))); // NOI18N
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/botaoFechar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setContentAreaFilled(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 0, -1, 30));
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nome:");
 
-        BotonAdicionaFuncionario.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonAdicionaFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/adicionar.png"))); // NOI18N
-        BotonAdicionaFuncionario.setBorderPainted(false);
-        BotonAdicionaFuncionario.setContentAreaFilled(false);
-        BotonAdicionaFuncionario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonAdicionaFuncionarioActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BotonAdicionaFuncionario);
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo-1P.png"))); // NOI18N
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 400, 130, 70));
+        BotonAdicionaFuncionario.setBackground(new java.awt.Color(255, 255, 255));
+        BotonAdicionaFuncionario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addUser30.png"))); // NOI18N
+        BotonAdicionaFuncionario.setBorder(null);
 
-        BotonEditar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/editar.png"))); // NOI18N
-        BotonEditar.setBorderPainted(false);
-        BotonEditar.setContentAreaFilled(false);
-        BotonEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonEditarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(BotonEditar);
+        BotonEditar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/editUser30.png"))); // NOI18N
+        BotonEditar.setBorder(null);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 400, 130, 70));
+        BotonDetalhes.setBackground(new java.awt.Color(255, 255, 255));
+        BotonDetalhes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/detalhes30.png"))); // NOI18N
+        BotonDetalhes.setBorder(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 6.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, -3, 1000, 500));
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BotonSair))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BotonPesquisar))
+                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
+                                    .addComponent(jLabel1)
+                                    .addGap(621, 621, 621)
+                                    .addComponent(jLabel2))
+                                .addGroup(jPanel3Layout.createSequentialGroup()
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel3Layout.createSequentialGroup()
+                                            .addComponent(BotonAdicionaFuncionario)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(BotonEditar)
+                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                            .addComponent(BotonDetalhes)))
+                                    .addGap(6, 6, 6))))))
+                .addGap(0, 54, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(BotonSair)
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel1))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotonPesquisar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 277, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotonEditar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BotonDetalhes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BotonAdicionaFuncionario, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BotonAdicionaFuncionarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAdicionaFuncionarioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonAdicionaFuncionarioActionPerformed
-
-    private void BotonDetalhesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonDetalhesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonDetalhesActionPerformed
-
-    private void BotonPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPesquisarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonPesquisarActionPerformed
-
-    private void BotonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEditarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonEditarActionPerformed
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -246,8 +264,8 @@ public class TelaFuncionario extends javax.swing.JFrame {
     private javax.swing.JButton BotonSair;
     private javax.swing.JTable TabelaFuncionario;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField pesquisar;
     // End of variables declaration//GEN-END:variables

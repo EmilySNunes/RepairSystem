@@ -77,176 +77,199 @@ public class TelaAddRelatorio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Equipamentosreparados = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        BotonSair = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         Problema = new javax.swing.JTextField();
         empresasolicitante = new javax.swing.JTextField();
-        nometecnico = new javax.swing.JTextField();
-        Compoentestroca = new javax.swing.JTextField();
         Solucao = new javax.swing.JTextField();
+        cpfvalido = new javax.swing.JFormattedTextField();
+        nometecnico = new javax.swing.JTextField();
         Nderelatorio = new javax.swing.JTextField();
-        cpfvalido = new javax.swing.JTextField();
-        BotonSair = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        Equipamentosreparados = new javax.swing.JTextField();
+        Compoentestroca = new javax.swing.JTextField();
         BotaoAnexar = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
         BotaoExcluir = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Equipamentosreparados.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Equipamentosreparados.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EquipamentosreparadosActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Equipamentosreparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 400, 40));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        Problema.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Problema.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProblemaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Problema, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 400, 60));
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nº do Relatório:");
 
-        empresasolicitante.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        empresasolicitante.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                empresasolicitanteActionPerformed(evt);
-            }
-        });
-        getContentPane().add(empresasolicitante, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 140, 250, 40));
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/voltar.png"))); // NOI18N
+        BotonSair.setBorder(null);
 
-        nometecnico.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        nometecnico.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nometecnicoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(nometecnico, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 180, 250, 40));
+        jLabel2.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("CPF do Técnico:");
 
-        Compoentestroca.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Compoentestroca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CompoentestrocaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Compoentestroca, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 260, 420, 40));
+        jLabel3.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Equipamentos reparados:");
 
-        Solucao.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Solucao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SolucaoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Solucao, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 420, 60));
+        jLabel4.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Problema identificado:");
 
-        Nderelatorio.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Nderelatorio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NderelatorioActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Nderelatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 250, 40));
+        jLabel5.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Nome do técnico:");
 
-        cpfvalido.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        cpfvalido.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cpfvalidoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(cpfvalido, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 180, 250, 40));
+        jLabel6.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Empresa solicitante:");
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/voltar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setContentAreaFilled(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 60, 30));
+        jLabel7.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Componentes trocados:");
 
-        BotaoAnexar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotaoAnexar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/anexar.png"))); // NOI18N
-        BotaoAnexar.setToolTipText("");
-        BotaoAnexar.setBorderPainted(false);
-        BotaoAnexar.setContentAreaFilled(false);
-        BotaoAnexar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoAnexarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BotaoAnexar);
+        jLabel8.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Solução adotada:");
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 410, 140, 80));
+        Problema.setBackground(new java.awt.Color(255, 255, 255));
+        Problema.setForeground(new java.awt.Color(0, 0, 0));
+        Problema.setToolTipText("");
 
-        BotaoExcluir.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotaoExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/excluir.png"))); // NOI18N
-        BotaoExcluir.setBorderPainted(false);
-        BotaoExcluir.setContentAreaFilled(false);
-        BotaoExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoExcluirActionPerformed(evt);
-            }
-        });
-        jPanel2.add(BotaoExcluir);
+        empresasolicitante.setBackground(new java.awt.Color(255, 255, 255));
+        empresasolicitante.setForeground(new java.awt.Color(0, 0, 0));
+        empresasolicitante.setToolTipText("");
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 410, 140, 80));
+        Solucao.setBackground(new java.awt.Color(255, 255, 255));
+        Solucao.setForeground(new java.awt.Color(0, 0, 0));
+        Solucao.setToolTipText("");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 5.1.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 7, 1000, 490));
+        cpfvalido.setBackground(new java.awt.Color(255, 255, 255));
+        cpfvalido.setForeground(new java.awt.Color(0, 0, 0));
+        try {
+            cpfvalido.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        nometecnico.setBackground(new java.awt.Color(255, 255, 255));
+        nometecnico.setForeground(new java.awt.Color(0, 0, 0));
+        nometecnico.setToolTipText("");
+
+        Nderelatorio.setBackground(new java.awt.Color(255, 255, 255));
+        Nderelatorio.setForeground(new java.awt.Color(0, 0, 0));
+        Nderelatorio.setToolTipText("");
+
+        Equipamentosreparados.setBackground(new java.awt.Color(255, 255, 255));
+        Equipamentosreparados.setForeground(new java.awt.Color(0, 0, 0));
+        Equipamentosreparados.setToolTipText("");
+
+        Compoentestroca.setBackground(new java.awt.Color(255, 255, 255));
+        Compoentestroca.setForeground(new java.awt.Color(0, 0, 0));
+        Compoentestroca.setToolTipText("");
+
+        BotaoAnexar.setBackground(new java.awt.Color(255, 255, 255));
+        BotaoAnexar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/anexar30.png"))); // NOI18N
+        BotaoAnexar.setBorder(null);
+
+        BotaoExcluir.setBackground(new java.awt.Color(255, 255, 255));
+        BotaoExcluir.setForeground(new java.awt.Color(0, 0, 0));
+        BotaoExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/removerUser30.png"))); // NOI18N
+        BotaoExcluir.setBorder(null);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BotonSair))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(BotaoExcluir)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BotaoAnexar))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(Problema, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cpfvalido, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Equipamentosreparados, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Nderelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(99, 99, 99)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(empresasolicitante, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel5)
+                                    .addComponent(nometecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7)
+                                    .addComponent(Solucao, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel8)
+                                    .addComponent(Compoentestroca, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addContainerGap(37, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(BotonSair)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(empresasolicitante, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Nderelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cpfvalido, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nometecnico, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(23, 23, 23)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Compoentestroca, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Equipamentosreparados, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Problema, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Solucao, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(BotaoAnexar))
+                    .addComponent(BotaoExcluir))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BotaoAnexarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoAnexarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaoAnexarActionPerformed
-
-    private void BotaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoExcluirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaoExcluirActionPerformed
-
-    private void NderelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NderelatorioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NderelatorioActionPerformed
-
-    private void cpfvalidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfvalidoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cpfvalidoActionPerformed
-
-    private void EquipamentosreparadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EquipamentosreparadosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EquipamentosreparadosActionPerformed
-
-    private void ProblemaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProblemaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProblemaActionPerformed
-
-    private void empresasolicitanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empresasolicitanteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_empresasolicitanteActionPerformed
-
-    private void nometecnicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nometecnicoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nometecnicoActionPerformed
-
-    private void CompoentestrocaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CompoentestrocaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CompoentestrocaActionPerformed
-
-    private void SolucaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SolucaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SolucaoActionPerformed
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -294,11 +317,17 @@ public class TelaAddRelatorio extends javax.swing.JFrame {
     private javax.swing.JTextField Nderelatorio;
     private javax.swing.JTextField Problema;
     private javax.swing.JTextField Solucao;
-    private javax.swing.JTextField cpfvalido;
+    private javax.swing.JFormattedTextField cpfvalido;
     private javax.swing.JTextField empresasolicitante;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField nometecnico;
     // End of variables declaration//GEN-END:variables
 }

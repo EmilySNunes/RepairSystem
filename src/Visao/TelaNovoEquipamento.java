@@ -22,8 +22,8 @@ public class TelaNovoEquipamento extends javax.swing.JFrame {
         return BotaoExcluir;
     }
 
-    public JButton getBotaoVoltar() {
-        return BotaoVoltar;
+    public JButton getBotaoSalvar() {
+        return BotaoSalvar;
     }
 
     public JButton getBotonSair() {
@@ -40,10 +40,6 @@ public class TelaNovoEquipamento extends javax.swing.JFrame {
 
     public JTextField getDatafabricacao() {
         return datafabricacao;
-    }
-
-    public JLabel getjLabel1() {
-        return jLabel1;
     }
 
     public JTextField getNcontrato() {
@@ -66,188 +62,202 @@ public class TelaNovoEquipamento extends javax.swing.JFrame {
         return valorassociado;
     }
 
-  
+ 
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Ndeserie = new javax.swing.JTextField();
+        jPanel3 = new javax.swing.JPanel();
+        BotonSair = new javax.swing.JButton();
+        lblcpf = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         tipodeequipamento = new javax.swing.JTextField();
         valorassociado = new javax.swing.JTextField();
-        nomeequipamento = new javax.swing.JTextField();
         ncontrato = new javax.swing.JTextField();
-        datafabricacao = new javax.swing.JTextField();
-        parcelasdepagamento = new javax.swing.JTextField();
-        Ndemanutencao = new javax.swing.JTextField();
-        BotonSair = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
         BotaoExcluir = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        BotaoVoltar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        BotaoSalvar = new javax.swing.JButton();
+        Ndeserie = new javax.swing.JTextField();
+        nomeequipamento = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        parcelasdepagamento = new javax.swing.JTextField();
+        datafabricacao = new javax.swing.JFormattedTextField();
+        Ndemanutencao = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Ndeserie.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Ndeserie.setText("222222222222");
-        Ndeserie.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NdeserieActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Ndeserie, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 250, 40));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        tipodeequipamento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        tipodeequipamento.setText("Cirúrgicos");
-        tipodeequipamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tipodeequipamentoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(tipodeequipamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 220, 40));
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/voltar.png"))); // NOI18N
+        BotonSair.setBorder(null);
 
-        valorassociado.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        valorassociado.setText("2000");
-        valorassociado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                valorassociadoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(valorassociado, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 280, 250, 40));
+        lblcpf.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        lblcpf.setForeground(new java.awt.Color(0, 0, 0));
+        lblcpf.setText("Nº de serie:");
 
-        nomeequipamento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        nomeequipamento.setText("Bistúri");
-        nomeequipamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nomeequipamentoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(nomeequipamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 250, 40));
+        jLabel2.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Nº de Manutenção:");
 
-        ncontrato.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        ncontrato.setText("12");
-        ncontrato.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ncontratoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(ncontrato, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 190, 300, 40));
+        jLabel3.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Tipo de equipamento:");
 
-        datafabricacao.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        datafabricacao.setText("01032015");
-        datafabricacao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                datafabricacaoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(datafabricacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 240, 260, 40));
+        jLabel4.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Nome do equipamento");
 
-        parcelasdepagamento.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        parcelasdepagamento.setText("10");
-        parcelasdepagamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                parcelasdepagamentoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(parcelasdepagamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 280, 230, 40));
+        jLabel5.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Nº do Contrato:");
 
-        Ndemanutencao.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        Ndemanutencao.setText("23");
-        Ndemanutencao.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NdemanutencaoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(Ndemanutencao, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 250, 40));
+        jLabel6.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Valor associado:");
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/voltar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setContentAreaFilled(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 60, 30));
+        tipodeequipamento.setBackground(new java.awt.Color(255, 255, 255));
+        tipodeequipamento.setForeground(new java.awt.Color(0, 0, 0));
 
-        BotaoExcluir.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotaoExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/excluir.png"))); // NOI18N
-        BotaoExcluir.setBorderPainted(false);
-        BotaoExcluir.setContentAreaFilled(false);
-        BotaoExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoExcluirActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BotaoExcluir);
+        valorassociado.setBackground(new java.awt.Color(255, 255, 255));
+        valorassociado.setForeground(new java.awt.Color(0, 0, 0));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 140, 70));
+        ncontrato.setBackground(new java.awt.Color(255, 255, 255));
+        ncontrato.setForeground(new java.awt.Color(0, 0, 0));
 
-        BotaoVoltar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotaoVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/salvar.png"))); // NOI18N
-        BotaoVoltar.setBorderPainted(false);
-        BotaoVoltar.setContentAreaFilled(false);
-        BotaoVoltar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoVoltarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(BotaoVoltar);
+        BotaoExcluir.setBackground(new java.awt.Color(255, 255, 255));
+        BotaoExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/removerUser30.png"))); // NOI18N
+        BotaoExcluir.setBorder(null);
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 400, 140, 70));
+        BotaoSalvar.setBackground(new java.awt.Color(255, 255, 255));
+        BotaoSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save--v2.png"))); // NOI18N
+        BotaoSalvar.setBorder(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 7.1 Novo equipamento.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, -3, 1000, 500));
+        Ndeserie.setBackground(new java.awt.Color(255, 255, 255));
+        Ndeserie.setForeground(new java.awt.Color(0, 0, 0));
+
+        nomeequipamento.setBackground(new java.awt.Color(255, 255, 255));
+        nomeequipamento.setForeground(new java.awt.Color(0, 0, 0));
+
+        jLabel8.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Data de fabricação:");
+
+        jLabel9.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel9.setText("Parcelas de pagamentos:");
+
+        parcelasdepagamento.setBackground(new java.awt.Color(255, 255, 255));
+        parcelasdepagamento.setForeground(new java.awt.Color(0, 0, 0));
+
+        datafabricacao.setBackground(new java.awt.Color(255, 255, 255));
+        datafabricacao.setForeground(new java.awt.Color(0, 0, 0));
+        try {
+            datafabricacao.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        Ndemanutencao.setBackground(new java.awt.Color(255, 255, 255));
+        Ndemanutencao.setForeground(new java.awt.Color(0, 0, 0));
+        Ndemanutencao.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BotonSair)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BotaoSalvar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BotaoExcluir))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2)
+                            .addComponent(lblcpf)
+                            .addComponent(jLabel3)
+                            .addComponent(tipodeequipamento, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                            .addComponent(Ndeserie, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                            .addComponent(valorassociado, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                            .addComponent(jLabel6)
+                            .addComponent(Ndemanutencao, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ncontrato, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(nomeequipamento, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel8)
+                            .addComponent(parcelasdepagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9)
+                            .addComponent(datafabricacao, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(50, 50, 50))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BotonSair)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nomeequipamento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Ndemanutencao, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblcpf)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Ndeserie, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ncontrato, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tipodeequipamento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(datafabricacao, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(valorassociado, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(parcelasdepagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotaoSalvar)
+                    .addComponent(BotaoExcluir))
+                .addContainerGap(26, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void NdeserieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NdeserieActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NdeserieActionPerformed
-
-    private void BotaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoVoltarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaoVoltarActionPerformed
-
-    private void tipodeequipamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tipodeequipamentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tipodeequipamentoActionPerformed
-
-    private void valorassociadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorassociadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_valorassociadoActionPerformed
-
-    private void nomeequipamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeequipamentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_nomeequipamentoActionPerformed
-
-    private void ncontratoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ncontratoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ncontratoActionPerformed
-
-    private void datafabricacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_datafabricacaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_datafabricacaoActionPerformed
-
-    private void parcelasdepagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_parcelasdepagamentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_parcelasdepagamentoActionPerformed
-
-    private void NdemanutencaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NdemanutencaoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_NdemanutencaoActionPerformed
-
-    private void BotaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoExcluirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaoExcluirActionPerformed
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
 
     /**
      * @param args the command line arguments
@@ -288,14 +298,20 @@ public class TelaNovoEquipamento extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotaoExcluir;
-    private javax.swing.JButton BotaoVoltar;
+    private javax.swing.JButton BotaoSalvar;
     private javax.swing.JButton BotonSair;
     private javax.swing.JTextField Ndemanutencao;
     private javax.swing.JTextField Ndeserie;
-    private javax.swing.JTextField datafabricacao;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JFormattedTextField datafabricacao;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lblcpf;
     private javax.swing.JTextField ncontrato;
     private javax.swing.JTextField nomeequipamento;
     private javax.swing.JTextField parcelasdepagamento;

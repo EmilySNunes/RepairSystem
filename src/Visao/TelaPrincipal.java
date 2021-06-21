@@ -55,76 +55,133 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel2 = new javax.swing.JPanel();
         BotonSair = new javax.swing.JButton();
+        BotonFuncionaios = new javax.swing.JButton();
+        BotonCadastro = new javax.swing.JButton();
         BotonEquipamento = new javax.swing.JButton();
         BotonContratos = new javax.swing.JButton();
         BotonRelatorios = new javax.swing.JButton();
-        BotonFuncionaios = new javax.swing.JButton();
-        BotonCadastro = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/voltar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setContentAreaFilled(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 70, 30));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setForeground(new java.awt.Color(0, 0, 0));
 
-        BotonEquipamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/botaoEquipamento.png"))); // NOI18N
-        BotonEquipamento.setBorderPainted(false);
-        BotonEquipamento.setContentAreaFilled(false);
-        BotonEquipamento.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonEquipamentoActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonEquipamento, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 110, 190, 180));
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setForeground(new java.awt.Color(0, 0, 0));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Engrenagem20.png"))); // NOI18N
+        BotonSair.setText("Fazer Logout");
+        BotonSair.setBorder(null);
 
-        BotonContratos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/botaoContrato.png"))); // NOI18N
-        BotonContratos.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0));
-        BotonContratos.setContentAreaFilled(false);
-        getContentPane().add(BotonContratos, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 110, 190, 180));
+        BotonFuncionaios.setBackground(new java.awt.Color(255, 255, 255));
+        BotonFuncionaios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Funcionários100.png"))); // NOI18N
+        BotonFuncionaios.setBorder(null);
 
-        BotonRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/botaoRelatorio.png"))); // NOI18N
-        BotonRelatorios.setBorderPainted(false);
-        BotonRelatorios.setContentAreaFilled(false);
-        getContentPane().add(BotonRelatorios, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 290, 190, 180));
+        BotonCadastro.setBackground(new java.awt.Color(255, 255, 255));
+        BotonCadastro.setForeground(new java.awt.Color(0, 0, 0));
+        BotonCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Chamado100.png"))); // NOI18N
+        BotonCadastro.setToolTipText("");
+        BotonCadastro.setAutoscrolls(true);
+        BotonCadastro.setBorder(null);
 
-        BotonFuncionaios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/botaoFuncionario.png"))); // NOI18N
-        BotonFuncionaios.setBorderPainted(false);
-        BotonFuncionaios.setContentAreaFilled(false);
-        getContentPane().add(BotonFuncionaios, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 190, 180));
+        BotonEquipamento.setBackground(new java.awt.Color(255, 255, 255));
+        BotonEquipamento.setForeground(new java.awt.Color(0, 0, 0));
+        BotonEquipamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Equipamento100.png"))); // NOI18N
+        BotonEquipamento.setBorder(null);
 
-        BotonCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/botaoChamado.png"))); // NOI18N
-        BotonCadastro.setBorderPainted(false);
-        BotonCadastro.setContentAreaFilled(false);
-        getContentPane().add(BotonCadastro, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 190, 180));
+        BotonContratos.setBackground(new java.awt.Color(255, 255, 255));
+        BotonContratos.setForeground(new java.awt.Color(0, 0, 0));
+        BotonContratos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Contrato.png"))); // NOI18N
+        BotonContratos.setBorder(null);
 
-        jPanel1.setBackground(java.awt.Color.white);
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 20, 30, 30));
+        BotonRelatorios.setBackground(new java.awt.Color(255, 255, 255));
+        BotonRelatorios.setForeground(new java.awt.Color(0, 0, 0));
+        BotonRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Relatorio.png"))); // NOI18N
+        BotonRelatorios.setBorder(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 2- admin.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 7, 1000, 490));
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/administrador50.png"))); // NOI18N
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Administrador");
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo-1300.png"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(BotonSair)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(BotonFuncionaios)
+                        .addGap(18, 18, 18)
+                        .addComponent(BotonRelatorios)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(23, 23, 23))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addContainerGap())))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(BotonCadastro)
+                                    .addComponent(BotonEquipamento))
+                                .addGap(262, 262, 262)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BotonContratos))
+                        .addContainerGap(380, Short.MAX_VALUE))))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(BotonSair)
+                                .addGap(18, 18, 18)
+                                .addComponent(BotonFuncionaios))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addComponent(BotonRelatorios)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(27, 27, 27)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(BotonCadastro)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BotonEquipamento))))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel2)))
+                .addGap(12, 12, 12)
+                .addComponent(BotonContratos)
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(jPanel2, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
-
-    private void BotonEquipamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEquipamentoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonEquipamentoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,6 +227,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton BotonRelatorios;
     private javax.swing.JButton BotonSair;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

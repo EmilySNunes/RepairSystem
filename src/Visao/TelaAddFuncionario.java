@@ -1,6 +1,9 @@
 
 package Visao;
 
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JRadioButton;
@@ -17,6 +20,7 @@ public class TelaAddFuncionario extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         
         this.setResizable(false);
+            
     }
 
     public JButton getBotaoExcluir() {
@@ -26,8 +30,14 @@ public class TelaAddFuncionario extends javax.swing.JFrame {
     public JButton getBotaoSalvar() {
         return BotaoSalvar;
     }
+    
+    //NÃO EXISTE ESSE BOTÃO NA ARQUITETURA
+   /* public JButton getBotaoVisualizar() {
+        return BotaoVisualizar;
+    }*/
 
-    public JTextField getCpf() {
+
+    public JTextField getCpf() {  
         return cpf;
     }
 
@@ -48,7 +58,7 @@ public class TelaAddFuncionario extends javax.swing.JFrame {
     }
 
     public JRadioButton getMarcaAtende() {
-        return marcaAtende;
+        return marcaVende;
     }
 
     public JRadioButton getMarcaSuper() {
@@ -63,14 +73,8 @@ public class TelaAddFuncionario extends javax.swing.JFrame {
         return marcaVende;
     }
 
-    
-
     public JTextField getHorasdetrabalho() {
         return horasdetrabalho;
-    }
-
-    public JLabel getjLabel1() {
-        return jLabel1;
     }
 
     public JTextField getNome() {
@@ -92,210 +96,232 @@ public class TelaAddFuncionario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cpf = new javax.swing.JTextField();
-        endereco = new javax.swing.JTextField();
-        email = new javax.swing.JTextField();
-        telefone = new javax.swing.JTextField();
-        nome = new javax.swing.JTextField();
-        horasdetrabalho = new javax.swing.JTextField();
-        marcaAdm = new javax.swing.JRadioButton();
-        marcaAtende = new javax.swing.JRadioButton();
-        marcaSuper = new javax.swing.JRadioButton();
-        marcaVende = new javax.swing.JRadioButton();
-        marcaTecni = new javax.swing.JRadioButton();
-        jLabel2 = new javax.swing.JLabel();
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jPanel3 = new javax.swing.JPanel();
         BotonSair = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        lblcpf = new javax.swing.JLabel();
+        nome = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        endereco = new javax.swing.JTextField();
+        horasdetrabalho = new javax.swing.JTextField();
+        email = new javax.swing.JTextField();
+        cpf = new javax.swing.JFormattedTextField();
+        telefone = new javax.swing.JFormattedTextField();
+        jLabel7 = new javax.swing.JLabel();
+        marcaAdm = new javax.swing.JRadioButton();
+        marcaVende = new javax.swing.JRadioButton();
+        marcaSuper = new javax.swing.JRadioButton();
+        marcaAtende = new javax.swing.JRadioButton();
+        marcaTecni = new javax.swing.JRadioButton();
         BotaoExcluir = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
         BotaoSalvar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setTitle("Cadastro de Funcionário");
 
-        cpf.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(cpf, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 180, 490, 30));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        endereco.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(endereco, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 220, 470, 30));
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/voltar.png"))); // NOI18N
+        BotonSair.setBorder(null);
 
-        email.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 260, 490, 30));
+        lblcpf.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        lblcpf.setForeground(new java.awt.Color(0, 0, 0));
+        lblcpf.setText("CPF:");
 
-        telefone.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, 470, 30));
+        nome.setBackground(new java.awt.Color(255, 255, 255));
+        nome.setForeground(new java.awt.Color(0, 0, 0));
 
-        nome.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 490, 30));
+        jLabel2.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Nome:");
 
-        horasdetrabalho.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        getContentPane().add(horasdetrabalho, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 340, 390, 30));
+        jLabel3.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Endereço:");
 
-        marcaAdm.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("E-mail:");
+
+        jLabel5.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Telefone:");
+
+        jLabel6.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Horas de Trabalho:");
+
+        endereco.setBackground(new java.awt.Color(255, 255, 255));
+        endereco.setForeground(new java.awt.Color(0, 0, 0));
+
+        horasdetrabalho.setBackground(new java.awt.Color(255, 255, 255));
+        horasdetrabalho.setForeground(new java.awt.Color(0, 0, 0));
+
+        email.setBackground(new java.awt.Color(255, 255, 255));
+        email.setForeground(new java.awt.Color(0, 0, 0));
+
+        cpf.setBackground(new java.awt.Color(255, 255, 255));
+        try {
+            cpf.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        telefone.setBackground(new java.awt.Color(255, 255, 255));
+        try {
+            telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##)#####-####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+
+        jLabel7.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setText("Função:");
+
+        marcaAdm.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(marcaAdm);
+        marcaAdm.setForeground(new java.awt.Color(0, 0, 0));
+        marcaAdm.setSelected(true);
         marcaAdm.setText("Administrador");
-        marcaAdm.addContainerListener(new java.awt.event.ContainerAdapter() {
-            public void componentRemoved(java.awt.event.ContainerEvent evt) {
-                marcaAdmComponentRemoved(evt);
-            }
-        });
-        marcaAdm.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcaAdmActionPerformed(evt);
-            }
-        });
-        getContentPane().add(marcaAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 170, 200, -1));
 
-        marcaAtende.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        marcaVende.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(marcaVende);
+        marcaVende.setForeground(new java.awt.Color(0, 0, 0));
+        marcaVende.setText("Vendendor");
+
+        marcaSuper.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(marcaSuper);
+        marcaSuper.setForeground(new java.awt.Color(0, 0, 0));
+        marcaSuper.setText("Superior");
+
+        marcaAtende.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(marcaAtende);
+        marcaAtende.setForeground(new java.awt.Color(0, 0, 0));
         marcaAtende.setText("Atendente");
-        marcaAtende.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcaAtendeActionPerformed(evt);
-            }
-        });
-        getContentPane().add(marcaAtende, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 250, 200, 30));
 
-        marcaSuper.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        marcaSuper.setText("Supervisor");
-        marcaSuper.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcaSuperActionPerformed(evt);
-            }
-        });
-        getContentPane().add(marcaSuper, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 210, 200, -1));
+        marcaTecni.setBackground(new java.awt.Color(255, 255, 255));
+        buttonGroup1.add(marcaTecni);
+        marcaTecni.setForeground(new java.awt.Color(0, 0, 0));
+        marcaTecni.setText("Tecnico");
 
-        marcaVende.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        marcaVende.setText("Vendedor");
-        marcaVende.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcaVendeActionPerformed(evt);
-            }
-        });
-        getContentPane().add(marcaVende, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 190, 200, -1));
+        BotaoExcluir.setBackground(new java.awt.Color(255, 255, 255));
+        BotaoExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/removerUser30.png"))); // NOI18N
+        BotaoExcluir.setBorder(null);
 
-        marcaTecni.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        marcaTecni.setText("Técnico");
-        marcaTecni.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                marcaTecniActionPerformed(evt);
-            }
-        });
-        getContentPane().add(marcaTecni, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 230, 200, -1));
+        BotaoSalvar.setBackground(new java.awt.Color(255, 255, 255));
+        BotaoSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save--v2.png"))); // NOI18N
+        BotaoSalvar.setBorder(null);
 
-        jLabel2.setBackground(java.awt.Color.lightGray);
-        jLabel2.setForeground(java.awt.Color.gray);
-        jLabel2.setOpaque(true);
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 170, 200, 110));
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(BotonSair))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(lblcpf)
+                                    .addComponent(jLabel3)
+                                    .addComponent(nome, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(endereco, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cpf, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGap(48, 48, 48)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel5)
+                                    .addComponent(telefone, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6)
+                                    .addComponent(horasdetrabalho, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(9, 9, 9)
+                                .addComponent(BotaoSalvar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BotaoExcluir)
+                                .addGap(19, 19, 19))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(marcaSuper, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(marcaTecni, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(marcaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(marcaAtende, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(marcaVende, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BotonSair)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblcpf)
+                    .addComponent(jLabel5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cpf, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(telefone, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(endereco, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(horasdetrabalho, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jLabel7)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(marcaAdm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(marcaVende, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(marcaAtende, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(marcaSuper, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(marcaTecni, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                        .addComponent(BotaoExcluir))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(BotaoSalvar)))
+                .addContainerGap())
+        );
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/voltar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setContentAreaFilled(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 50, 30));
-
-        BotaoExcluir.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotaoExcluir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/excluir.png"))); // NOI18N
-        BotaoExcluir.setBorderPainted(false);
-        BotaoExcluir.setContentAreaFilled(false);
-        BotaoExcluir.setDefaultCapable(false);
-        BotaoExcluir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoExcluirActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BotaoExcluir);
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 400, 120, 90));
-
-        BotaoSalvar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotaoSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/salvar.png"))); // NOI18N
-        BotaoSalvar.setBorderPainted(false);
-        BotaoSalvar.setContentAreaFilled(false);
-        BotaoSalvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotaoSalvarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(BotaoSalvar);
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 400, 120, 90));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 6.1.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, -3, 1000, 500));
+        getContentPane().add(jPanel3, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BotaoExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoExcluirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaoExcluirActionPerformed
-
-    private void BotaoSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotaoSalvarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotaoSalvarActionPerformed
-
-    private void marcaAdmComponentRemoved(java.awt.event.ContainerEvent evt) {//GEN-FIRST:event_marcaAdmComponentRemoved
-
-    }//GEN-LAST:event_marcaAdmComponentRemoved
-
-    private void marcaAdmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaAdmActionPerformed
-
-        marcaAtende.setSelected(false);
-        marcaSuper.setSelected(false);
-        marcaTecni.setSelected(false);
-        marcaVende.setSelected(false);
-
-    }//GEN-LAST:event_marcaAdmActionPerformed
-
-    private void marcaAtendeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaAtendeActionPerformed
-
-        marcaAdm.setSelected(false);
-        marcaSuper.setSelected(false);
-        marcaTecni.setSelected(false);
-        marcaVende.setSelected(false);
-
-    }//GEN-LAST:event_marcaAtendeActionPerformed
-
-    private void marcaSuperActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaSuperActionPerformed
-
-        marcaAdm.setSelected(false);
-        marcaAtende.setSelected(false);
-        marcaTecni.setSelected(false);
-        marcaVende.setSelected(false);
-
-    }//GEN-LAST:event_marcaSuperActionPerformed
-
-    private void marcaVendeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaVendeActionPerformed
-
-        marcaAdm.setSelected(false);
-        marcaAtende.setSelected(false);
-        marcaSuper.setSelected(false);
-        marcaTecni.setSelected(false);
-
-    }//GEN-LAST:event_marcaVendeActionPerformed
-
-    private void marcaTecniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_marcaTecniActionPerformed
-
-        marcaAdm.setSelected(false);
-        marcaAtende.setSelected(false);
-        marcaSuper.setSelected(false);
-        marcaVende.setSelected(false);
-
-    }//GEN-LAST:event_marcaTecniActionPerformed
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
+    
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -334,20 +360,25 @@ public class TelaAddFuncionario extends javax.swing.JFrame {
     private javax.swing.JButton BotaoExcluir;
     private javax.swing.JButton BotaoSalvar;
     private javax.swing.JButton BotonSair;
-    private javax.swing.JTextField cpf;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JFormattedTextField cpf;
     private javax.swing.JTextField email;
     private javax.swing.JTextField endereco;
     private javax.swing.JTextField horasdetrabalho;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel lblcpf;
     private javax.swing.JRadioButton marcaAdm;
     private javax.swing.JRadioButton marcaAtende;
     private javax.swing.JRadioButton marcaSuper;
     private javax.swing.JRadioButton marcaTecni;
     private javax.swing.JRadioButton marcaVende;
     private javax.swing.JTextField nome;
-    private javax.swing.JTextField telefone;
+    private javax.swing.JFormattedTextField telefone;
     // End of variables declaration//GEN-END:variables
 }

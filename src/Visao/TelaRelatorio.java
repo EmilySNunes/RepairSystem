@@ -14,15 +14,10 @@ public class TelaRelatorio extends javax.swing.JFrame {
         
         
    
-    public TelaRelatorio(Object object, boolean b) {
-        
-        initComponents();
-        
-        this.setLocationRelativeTo(null);
-        
-        this.setResizable(false);
-
-        
+    public TelaRelatorio(Object object, boolean b) {  
+        initComponents(); 
+        this.setLocationRelativeTo(null);      
+        this.setResizable(false);  
     }
 
     public JButton getBotonAbrir() {
@@ -45,9 +40,6 @@ public class TelaRelatorio extends javax.swing.JFrame {
         return Tabelarelatorio;
     }
 
-    public JLabel getjLabel1() {
-        return jLabel1;
-    }
 
     public JScrollPane getjScrollPane1() {
         return jScrollPane1;
@@ -68,39 +60,47 @@ public class TelaRelatorio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        Tabelarelatorio = new javax.swing.JTable();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         pesquisar = new javax.swing.JTextField();
         BotonPesquisar = new javax.swing.JButton();
         BotonSair = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Tabelarelatorio = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
         BotonAbrir = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
         BotonEditar = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
         BotonDetalhes = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setFont(new java.awt.Font("Leelawadee UI Semilight", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nome:");
+
+        pesquisar.setBackground(new java.awt.Color(255, 255, 255));
+        pesquisar.setForeground(new java.awt.Color(0, 0, 0));
+
+        BotonPesquisar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonPesquisar.setForeground(new java.awt.Color(0, 0, 0));
+        BotonPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search15.png"))); // NOI18N
+
+        BotonSair.setBackground(new java.awt.Color(255, 255, 255));
+        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/voltar.png"))); // NOI18N
+        BotonSair.setBorder(null);
+
+        Tabelarelatorio.setBackground(new java.awt.Color(255, 255, 255));
         Tabelarelatorio.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        Tabelarelatorio.setForeground(new java.awt.Color(0, 0, 0));
         Tabelarelatorio.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
-                "Nº do Série", "Equipamento"
+                "Nº do Relatório", "Relatório Técnico"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -113,104 +113,90 @@ public class TelaRelatorio extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(Tabelarelatorio);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 760, 200));
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo-1P.png"))); // NOI18N
 
-        pesquisar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pesquisarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(pesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, 220, 40));
+        BotonAbrir.setBackground(new java.awt.Color(255, 255, 255));
+        BotonAbrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/addUser30.png"))); // NOI18N
+        BotonAbrir.setBorder(null);
 
-        BotonPesquisar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/iconePesquisar.png"))); // NOI18N
-        BotonPesquisar.setBorderPainted(false);
-        BotonPesquisar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonPesquisarActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonPesquisar, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 150, 80, 40));
+        BotonEditar.setBackground(new java.awt.Color(255, 255, 255));
+        BotonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/editUser30.png"))); // NOI18N
+        BotonEditar.setBorder(null);
 
-        BotonSair.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
-        BotonSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/voltar.png"))); // NOI18N
-        BotonSair.setBorderPainted(false);
-        BotonSair.setDoubleBuffered(true);
-        BotonSair.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonSairActionPerformed(evt);
-            }
-        });
-        getContentPane().add(BotonSair, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 60, 30));
-
-        BotonAbrir.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonAbrir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/adicionar.png"))); // NOI18N
-        BotonAbrir.setBorderPainted(false);
-        BotonAbrir.setContentAreaFilled(false);
-        BotonAbrir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonAbrirActionPerformed(evt);
-            }
-        });
-        jPanel1.add(BotonAbrir);
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 410, 170, 70));
-
-        BotonEditar.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/editar.png"))); // NOI18N
-        BotonEditar.setToolTipText("");
-        BotonEditar.setBorderPainted(false);
-        BotonEditar.setContentAreaFilled(false);
-        BotonEditar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BotonEditarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(BotonEditar);
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 410, 160, 70));
-
-        BotonDetalhes.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        BotonDetalhes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Icones/detalhes.png"))); // NOI18N
-        BotonDetalhes.setBorderPainted(false);
-        BotonDetalhes.setContentAreaFilled(false);
+        BotonDetalhes.setBackground(new java.awt.Color(255, 255, 255));
+        BotonDetalhes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/detalhes30.png"))); // NOI18N
+        BotonDetalhes.setBorder(null);
         BotonDetalhes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonDetalhesActionPerformed(evt);
             }
         });
-        jPanel3.add(BotonDetalhes);
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 400, 120, 80));
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(BotonSair)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(0, 65, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(BotonPesquisar)
+                            .addGap(511, 511, 511))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(jLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel2)
+                            .addGap(40, 40, 40)))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(BotonAbrir)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(BotonEditar)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(BotonDetalhes))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE))))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(BotonSair)
+                        .addGap(44, 44, 44)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pesquisar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotonPesquisar))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(BotonEditar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BotonDetalhes, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(BotonAbrir, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagens/Tela 5 Relatorio.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 7, 1000, 490));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BotonAbrirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonAbrirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonAbrirActionPerformed
-
-    private void pesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pesquisarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_pesquisarActionPerformed
-
-    private void BotonPesquisarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonPesquisarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonPesquisarActionPerformed
-
-    private void BotonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEditarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonEditarActionPerformed
-
     private void BotonDetalhesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonDetalhesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BotonDetalhesActionPerformed
-
-    private void BotonSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSairActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BotonSairActionPerformed
 
    
     
@@ -255,9 +241,8 @@ public class TelaRelatorio extends javax.swing.JFrame {
     private javax.swing.JButton BotonSair;
     private javax.swing.JTable Tabelarelatorio;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField pesquisar;
     // End of variables declaration//GEN-END:variables

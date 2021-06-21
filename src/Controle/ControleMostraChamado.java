@@ -7,6 +7,7 @@ import Visao.TelaChamado;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.ERROR_MESSAGE;
 import static javax.swing.JOptionPane.WARNING_MESSAGE;
 
 
@@ -23,7 +24,7 @@ public class ControleMostraChamado  implements ActionListener{
         
       
         addListerners();
-        
+        RMC.listar();
         this.TC.setVisible(true);
 
     }
@@ -44,11 +45,13 @@ public class ControleMostraChamado  implements ActionListener{
         
         if(var.getSource().equals(this.TC.getBotonAbrir())){
         
-          JOptionPane.showMessageDialog(null,"AINDA NÃO HÁ AÇÕES AQUI!", "INFORMAÇÃO: ",WARNING_MESSAGE);
+          ControleChamado CC = new ControleChamado();
+          
+          this.TC.dispose();
         
         } else if(var.getSource().equals(this.TC.getBotonDetalhes())){
         
-           JOptionPane.showMessageDialog(null,"AINDA NÃO HÁ AÇÕES AQUI!", "INFORMAÇÃO: ",WARNING_MESSAGE);
+           //RMC.listar();
         
         
         } else if(var.getSource().equals(this.TC.getBotonEditar())){
@@ -58,15 +61,58 @@ public class ControleMostraChamado  implements ActionListener{
         
         } else if(var.getSource().equals(this.TC.getBotonPesquisar())){
         
-           JOptionPane.showMessageDialog(null,"AINDA NÃO HÁ AÇÕES AQUI!", "INFORMAÇÃO: ",WARNING_MESSAGE);
+            this.RMC.pesquisar();
+           //JOptionPane.showMessageDialog(null,"AINDA NÃO HÁ AÇÕES AQUI!", "INFORMAÇÃO: ",WARNING_MESSAGE);
         
         
         } else if(var.getSource().equals(this.TC.getBotonSair())){
         
-          ControleLogin CL = new ControleLogin();
+            String rece = null;
           
-          TC.dispose();
+             try {
+                 
+                 rece = this.RMC.procuraLogin();
+                 
+                 if(rece.equals("Admnistrador")){
+       
+          ControlePrincipal CP = new ControlePrincipal();
+       
+           this.TC.dispose();
+           
+       }else if(rece.equals("Atendente")){
+       
+          ControleAtendente CA = new ControleAtendente();
+       
+           this.TC.dispose();
+           
+       }else if(rece.equals("Supervisor")){
+       
+          ControleSupervisor CS = new ControleSupervisor();
+       
+           this.TC.dispose();
+           
+       }else if(rece.equals("Tecnico")){
+       
+           ControleTecnico CT = new ControleTecnico();
+       
+            this.TC.dispose();
+            
+       }else if(rece.equals("Vendedor")){
+       
+          ControleVendedor CV = new ControleVendedor();
+       
+           this.TC.dispose();
+           
+       }
+                
+                TC.dispose();
+                 
+             } catch (Exception ex) {
+                 
+                 JOptionPane.showMessageDialog(null,"ERRO","XXXX",ERROR_MESSAGE);
+             }
         
+        }
         }
          
         
@@ -75,4 +121,4 @@ public class ControleMostraChamado  implements ActionListener{
     
     
     
-}
+
